@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recycle_view_fl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <fr.castorflex.android.verticalviewpager.VSwipeRefreshLayout
+        android:id="@+id/pull_refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pull_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="invisible" />
+    </fr.castorflex.android.verticalviewpager.VSwipeRefreshLayout>
+
+
+    <include
+        android:id="@+id/recycle_loading"
+        layout="@layout/pulltorefresh_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/recycle_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawablePadding="8dp"
+        android:textColor="#ffb7b6b7"
+        android:textSize="16sp"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/recycle_empty_layout"
+        android:visibility="invisible"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/recycle_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:drawablePadding="8dp"
+            android:singleLine="false"
+            android:textColor="#ff999999"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/recycle_empty_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:clickable="true"
+            android:visibility="gone"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/frameView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#50000000"
+        android:visibility="gone" />
+</FrameLayout>

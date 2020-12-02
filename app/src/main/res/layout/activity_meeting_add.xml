@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MeetingAddActivity">
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="您可以添加5个成员到会议室"
+        android:gravity="center"
+        android:padding="5dp"
+        android:background="@color/colorF"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_contacts_sl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/item_contacts_sl"
+        app:layout_constraintTop_toBottomOf="@id/text1"
+        app:layout_constraintBottom_toTopOf="@id/ly_bohao"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorF"
+        app:layout_constraintTop_toTopOf="@id/ly_bohao"
+        />
+    <LinearLayout
+        android:id="@+id/ly_bohao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/rec_contacts_sl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <LinearLayout
+            android:id="@+id/ll_number"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:maxLength="20"
+                android:textColor="@color/black_title_font"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:hint="输入号码"
+                android:padding="10dp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorF"
+                />
+
+            <LinearLayout
+                android:id="@+id/ll_baohao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextBlack.Small"
+                            android:text="1"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="oo"
+                            android:textColor="@color/black_title_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextBlack.Small"
+                            android:text="2"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ABC"
+                            android:textColor="@color/black_title_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextBlack.Small"
+                            android:text="3"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DEF"
+                            android:textColor="@color/black_title_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextBlack.Small"
+                            android:text="4"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="GHI"
+                            android:textColor="@color/black_title_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextBlack.Small"
+                            android:text="5"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="JKL"
+                            android:textColor="@color/black_title_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextBlack.Small"
+                            android:layout_height="wrap_content"
+                            android:text="6"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MNO"
+                            android:textColor="@color/black_title_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_7"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextBlack.Small"
+                            android:text="7"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PQRS"
+                            android:textColor="@color/black_title_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_8"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextBlack.Small"
+                            android:text="8"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TUV"
+                            android:textColor="@color/black_title_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_9"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextBlack.Small"
+                            android:text="9"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="WXYZ"
+                            android:textColor="@color/black_title_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_star"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextBlack.Small"
+                            android:text="*"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(P)"
+                            android:textColor="@color/black_title_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_0"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextBlack.Small"
+                            android:text="0"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+"
+                            android:textColor="@color/black_title_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_jing"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextBlack.Small"
+                            android:text="#"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(W)"
+                            android:textColor="@color/black_title_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp">
+            <ImageView
+                android:id="@+id/iv_more"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/ll_call"
+                android:scaleType="center"
+                android:src="@drawable/icon_bohaopan" />
+            <LinearLayout
+                android:id="@+id/ll_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_add"
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/shape_bohao_button"
+                    android:gravity="center">
+
+                    <TextView
+                        style="@style/TextWhite.Large"
+                        android:gravity="center"
+                        android:text="添加" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_del"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/ll_call"
+                android:scaleType="center"
+                android:src="@drawable/icon_shanc" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_module"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_sides">
+
+        <TextView
+            style="@style/TextBlack.Normal"
+            android:layout_weight="1"
+            android:text="回音消除" />
+
+        <ImageView
+
+            android:id="@+id/iv_echo_choose"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="center"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/selector_choose3" />
+    </LinearLayout>
+
+    <include layout="@layout/include_line_2" />
+
+    <LinearLayout
+        android:id="@+id/ll_jiaozheng"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_sides"
+        android:paddingRight="@dimen/space_sides">
+
+        <TextView
+            style="@style/TextBlack.Normal"
+            android:layout_weight="1"
+            android:text="回音消除器校正" />
+
+        <TextView
+            android:id="@+id/tv_echo_jiaozheng_state"
+            style="@style/TextGray.Small" />
+
+    </LinearLayout>
+
+    <include layout="@layout/include_line_2" />
+
+    <LinearLayout
+        android:id="@+id/ll_echo_test"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_sides"
+        android:paddingRight="@dimen/space_sides">
+
+        <TextView
+            style="@style/TextBlack.Normal"
+            android:layout_weight="1"
+            android:text="回音测试" />
+
+        <TextView
+            android:id="@+id/tv_echo_test_state"
+            style="@style/TextGray.Small" />
+
+    </LinearLayout>
+
+    <include layout="@layout/include_line_2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_sides">
+
+        <TextView
+            style="@style/TextBlack.Normal"
+            android:layout_weight="1"
+            android:text="自适应速率控制" />
+
+        <ImageView
+            android:id="@+id/iv_echo_adaptive_rate_control_choose"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="center"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/selector_choose3" />
+    </LinearLayout>
+
+    <include layout="@layout/include_line_2" />
+
+    <LinearLayout
+        android:id="@+id/ll_bitrate"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_sides"
+        android:paddingRight="@dimen/space_sides">
+
+        <TextView
+            style="@style/TextBlack.Normal"
+            android:layout_weight="1"
+            android:text="编解码的比特率限制" />
+
+        <TextView
+            android:id="@+id/tv_bitrate"
+            style="@style/TextGray.Small" />
+
+    </LinearLayout>
+
+    <include layout="@layout/include_line_2" />
+</LinearLayout>

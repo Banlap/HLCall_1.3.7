@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_module"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_row"
+        android:gravity="center"
+        android:text="呼叫类型"
+        android:textColor="@color/black_title_font"
+        android:textSize="@dimen/text_huge"
+        android:textStyle="bold" />
+
+    <include layout="@layout/include_line" />
+
+    <LinearLayout
+        android:id="@+id/ll_sip"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_row"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:id="@+id/tv_udp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="网络电话"
+            android:textColor="@color/black_title_font"
+            android:textSize="@dimen/text_normal"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_sip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/selector_choose" />
+    </LinearLayout>
+
+
+    <include layout="@layout/include_line_2" />
+
+    <LinearLayout
+        android:id="@+id/ll_SIM"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_row"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="SIM卡"
+            android:textColor="@color/black_title_font"
+            android:textSize="@dimen/text_normal"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_sim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/selector_choose" />
+    </LinearLayout>
+
+    <include layout="@layout/include_line_2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp">
+
+        <TextView
+            android:id="@+id/tv_no"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_gray_r10"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/white_font"
+            android:textSize="@dimen/text_normal" />
+
+
+        <TextView
+            android:id="@+id/tv_yes"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="13dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_blue_r10"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white_font"
+            android:textSize="@dimen/text_normal"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

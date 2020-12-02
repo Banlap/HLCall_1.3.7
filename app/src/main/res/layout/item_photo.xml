@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <hzhl.net.hlcall.view.AutoAdjustImageView
+        android:id="@+id/item_photo_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:adjustType="auto_adjust_scale_height"
+        app:scaleRate="1.0" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/image_border">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/item_photo_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#73000000"
+        android:visibility="gone">
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/item_photo_select_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_image_unchecked"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:layout_gravity="right|top"/>
+</FrameLayout>

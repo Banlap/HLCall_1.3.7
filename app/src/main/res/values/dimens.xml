@@ -1,0 +1,32 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_smaller">10sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_normal">14sp</dimen>
+    <dimen name="text_large">16sp</dimen>
+    <dimen name="text_huge">18sp</dimen>
+    <dimen name="number">24sp</dimen>
+    <dimen name="number_2">12sp</dimen>
+
+    <dimen name="radius_normal">6dp</dimen>
+    <dimen name="space_sides">13dp</dimen><!--两边的间距-->
+    <dimen name="space_vertical_detail">5dp</dimen><!--详情上下间距-->
+    <dimen name="space_row">50dp</dimen><!--1行高度-->
+
+    <dimen name="call_menu_icon">36dp</dimen>
+
+
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+    <dimen name="stv_corner">5dp</dimen>
+    <dimen name="tab_margin">10dp</dimen>
+    <dimen name="work_tab_menu_size">40dp</dimen>
+    <dimen name="work_tab_menu_size_h">45dp</dimen>
+    <dimen name="text_padding">5dp</dimen>
+    <dimen name="tab_elevation">4dp</dimen>
+</resources>

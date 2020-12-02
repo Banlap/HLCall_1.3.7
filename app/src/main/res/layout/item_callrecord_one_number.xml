@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_item"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/space_sides"
+    android:paddingRight="@dimen/space_sides">
+
+    <ImageView
+        android:id="@+id/iv_type"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:scaleType="center" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_time"
+                style="@style/TextBlack.Small"
+                android:layout_marginRight="10dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_number"
+            style="@style/TextGray.Small"
+            android:layout_marginLeft="7dp" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_state"
+        style="@style/TextGray.Small" />
+</LinearLayout>

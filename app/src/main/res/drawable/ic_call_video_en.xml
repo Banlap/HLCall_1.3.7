@@ -1,0 +1,4 @@
+<vector android:height="@dimen/call_menu_icon" android:viewportHeight="1024"
+    android:viewportWidth="1024" android:width="@dimen/call_menu_icon" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/call_menu_en" android:pathData="M924.68,747.02l-0.51,-456.9L747.79,392.21v-42.01c0,-62.43 -50.79,-113.23 -113.22,-113.23H212.54c-62.43,0 -113.23,50.79 -113.23,113.23V686.98c0,62.44 50.79,113.23 113.23,113.23h422.02c62.43,0 113.22,-50.79 113.22,-113.23V645.15l176.89,101.87zM877.94,370.39l0.33,296.44 -130.48,-75.14v-145.97l130.15,-75.33zM701.47,686.98c0,36.9 -30.01,66.91 -66.91,66.91H212.54c-36.89,0 -66.91,-30.01 -66.91,-66.91V350.2c0,-36.89 30.01,-66.91 66.91,-66.91h422.02c36.89,0 66.91,30.01 66.91,66.91v68.83l-0.01,199.45 0.01,0v68.5z"/>
+</vector>

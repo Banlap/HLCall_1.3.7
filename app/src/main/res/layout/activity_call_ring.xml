@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray20">
+    <TextureView
+        android:id="@+id/remote_video_texture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/call_menu_layout"
+        android:layout_marginBottom="100dp">
+        <RelativeLayout
+            android:id="@+id/rl_ring_top"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:gravity="bottom"
+            >
+
+            <LinearLayout
+                android:id="@+id/layout_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_incoming_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_font"
+                    android:textSize="35sp"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/white_font"
+                    android:textSize="@dimen/text_huge"
+                    android:layout_gravity="center"
+                    />
+
+                <Chronometer
+                    android:id="@+id/chronometer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white_font"
+                    android:textSize="@dimen/text_small"
+                    android:visibility="invisible"
+                    android:layout_gravity="center"
+                    />
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_describe"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/white_font"
+                        android:textSize="@dimen/text_huge" />
+
+                    <ImageView
+                        android:id="@+id/iv_del"
+                        android:layout_width="32dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_shanc"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_call_connected"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/ll_call_bohao"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll_1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/TextWhite.Small"
+                                android:text="1"
+                                android:textSize="@dimen/number"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="oo"
+                                android:textColor="@color/white_font"
+                                android:textSize="@dimen/number_2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/TextWhite.Small"
+                                android:text="2"
+                                android:textSize="@dimen/number"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ABC"
+                                android:textColor="@color/white_font"
+                                android:textSize="@dimen/number_2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/TextWhite.Small"
+                                android:text="3"
+                                android:textSize="@dimen/number"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="DEF"
+                                android:textColor="@color/white_font"
+                                android:textSize="@dimen/number_2" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll_4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/TextWhite.Small"
+                                android:text="4"
+                                android:textSize="@dimen/number"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="GHI"
+                                android:textColor="@color/white_font"
+                                android:textSize="@dimen/number_2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/TextWhite.Small"
+                                android:text="5"
+                                android:textSize="@dimen/number"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="JKL"
+                                android:textColor="@color/white_font"
+                                android:textSize="@dimen/number_2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/TextWhite.Small"
+                                android:layout_height="wrap_content"
+                                android:text="6"
+                                android:textSize="@dimen/number"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MNO"
+                                android:textColor="@color/white_font"
+                                android:textSize="@dimen/number_2" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll_7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/TextWhite.Small"
+                                android:text="7"
+                                android:textSize="@dimen/number"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="PQRS"
+                                android:textColor="@color/white_font"
+                                android:textSize="@dimen/number_2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/TextWhite.Small"
+                                android:text="8"
+                                android:textSize="@dimen/number"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TUV"
+                                android:textColor="@color/white_font"
+                                android:textSize="@dimen/number_2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_9"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/TextWhite.Small"
+                                android:text="9"
+                                android:textSize="@dimen/number"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="WXYZ"
+                                android:textColor="@color/white_font"
+                                android:textSize="@dimen/number_2" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll_star"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/TextWhite.Small"
+                                android:text="*"
+                                android:textSize="@dimen/number"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="(P)"
+                                android:textColor="@color/white_font"
+                                android:textSize="@dimen/number_2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_0"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/TextWhite.Small"
+                                android:text="0"
+                                android:textSize="@dimen/number"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+"
+                                android:textColor="@color/white_font"
+                                android:textSize="@dimen/number_2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_jing"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/TextWhite.Small"
+                                android:text="#"
+                                android:textSize="@dimen/number"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="(W)"
+                                android:textColor="@color/white_font"
+                                android:textSize="@dimen/number_2" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="bottom"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/tv_record"
+                            style="@style/TextWhite.Normal"
+                            android:drawableTop="@drawable/ic_call_record_selctor"
+                            android:gravity="center_horizontal"
+                            android:text="录音"
+                            android:textColor="@drawable/ic_call_text_selctor"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/tv_stop"
+                            style="@style/TextWhite.Normal"
+                            android:layout_marginLeft="75dp"
+                            android:drawableTop="@drawable/ic_call_stop_selctor"
+                            android:gravity="center_horizontal"
+                            android:text="保持"
+                            android:textColor="@drawable/ic_call_text_selctor"
+                            android:visibility="visible" />
+
+
+                        <TextView
+                            android:id="@+id/tv_transfer"
+                            style="@style/TextWhite.Normal"
+                            android:layout_marginLeft="75dp"
+                            android:drawableTop="@drawable/ic_call_tra_selctor"
+                            android:gravity="center_horizontal"
+                            android:textColor="@drawable/ic_call_text_selctor"
+                            android:text="转移" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="24dp"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/tv_video"
+                            style="@style/TextWhite.Normal"
+                            android:drawableTop="@drawable/ic_call_video_selctor"
+                            android:gravity="center_horizontal"
+                            android:text="视频"
+                            android:textColor="@drawable/ic_call_text_selctor"
+                            android:visibility="visible"
+                            />
+
+                        <TextView
+                            style="@style/TextWhite.Normal"
+                            android:layout_marginLeft="75dp"
+                            android:drawableTop="@drawable/selector_tongxunlu2"
+                            android:gravity="center_horizontal"
+                            android:text="通讯录"
+                            android:textColor="@drawable/ic_call_text_selctor"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_mute"
+                            style="@style/TextWhite.Normal"
+                            android:layout_marginLeft="75dp"
+                            android:drawableTop="@drawable/ic_call_re_selctor"
+                            android:gravity="center_horizontal"
+                            android:text="静音" />
+
+                        <TextView
+                            android:id="@+id/tv_keyboard"
+                            style="@style/TextWhite.Normal"
+                            android:layout_marginLeft="75dp"
+                            android:textColor="@drawable/ic_call_text_selctor"
+                            android:drawableTop="@drawable/ic_call_kb_selctor"
+                            android:gravity="center_horizontal"
+                            android:text="键盘" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="bottom"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/iv_close_connect"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/icon_guad" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_to"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_call_tra_normal"
+            android:layout_alignStart="@+id/iv_close_connect"
+            android:layout_alignEnd="@id/iv_close_connect"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/tv_more"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="60dp"
+            android:padding="5dp"
+            android:gravity="center"
+            android:src="@drawable/ic_call_menu_normal"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/iv_close_connect" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/tv_mianti"
+            android:src="@drawable/ic_call_sperker_selctor"
+            android:gravity="center_horizontal"
+            android:layout_toEndOf="@id/iv_close_connect"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="60dp"
+            />
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rl_call_ring"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_shanghuad"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/tv_move_up"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_move_up"
+            style="@style/TextWhite.Normal"
+            android:layout_marginBottom="50dp"
+            android:text="上滑接听/挂断"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/iv_close_ring"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/iv_call_answer"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="100dp"
+            android:src="@drawable/icon_jieting"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/iv_call_answer_video"
+            />
+
+
+        <!--接受视频-->
+        <ImageView
+            android:id="@+id/iv_call_answer_video"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginBottom="100dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_videocam_black_24dp"
+            android:background="@drawable/bg_r_green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/iv_call_answer"
+            app:layout_constraintRight_toLeftOf="@id/iv_close_ring"
+            app:layout_constraintTop_toTopOf="@id/iv_call_answer"
+            />
+
+        <ImageView
+            android:id="@+id/iv_close_ring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:src="@drawable/icon_guad"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/iv_call_answer_video"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_local_preview_texture"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="142dp"
+        android:layout_height="200dp"
+        android:background="@color/white_bg"
+        android:padding="1dp"
+        android:layout_gravity="top|right"
+        android:visibility="gone"
+        >
+        <org.linphone.mediastream.video.capture.CaptureTextureView
+            android:id="@+id/local_preview_texture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:src="@drawable/icon_switch_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_switch_camera_ring"
+            android:clickable="true"
+            android:layout_gravity="bottom"
+            android:visibility="gone"/>
+    </FrameLayout>
+</FrameLayout>

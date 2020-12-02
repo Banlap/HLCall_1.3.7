@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_module">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circle_head"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_touxiang" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/TextBlack.Large"
+                android:layout_marginTop="12dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/tv_detail_msg"
+                style="@style/TextBlack"
+                android:drawableTop="@drawable/icon_chat_message"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:text="短信"/>
+            <TextView
+                android:id="@+id/tv_detail_video"
+                style="@style/TextBlack"
+                android:drawableTop="@drawable/icon_chat_video"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:text="视频"
+                android:layout_marginLeft="70dp"/>
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_detail_meeting"
+                style="@style/TextBlack"
+                android:drawableTop="@drawable/icon_chat_meeting"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:text="会议"
+                android:layout_marginLeft="30dp"/>
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_detail_pic"
+                style="@style/TextBlack"
+                android:drawableTop="@drawable/icon_chat_pic"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:text="图片"
+                android:layout_marginLeft="30dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_row"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/space_sides"
+            android:paddingRight="@dimen/space_sides">
+
+            <TextView
+                style="@style/TextBlack.Normal"
+                android:layout_weight="1"
+                android:text="公司"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_company"
+                style="@style/TextGray.Normal" />
+        </LinearLayout>
+
+        <include layout="@layout/include_line_2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_row"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/space_sides"
+            android:paddingRight="@dimen/space_sides">
+
+            <TextView
+                style="@style/TextBlack.Normal"
+                android:layout_weight="1"
+                android:text="职位"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_job"
+                style="@style/TextGray.Normal" />
+        </LinearLayout>
+
+        <include layout="@layout/include_line_2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recy_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_add_blacklist"
+            style="@style/TextBlue.Normal"
+            android:layout_marginTop="20dp"
+            android:text="加入黑名单"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</ScrollView>

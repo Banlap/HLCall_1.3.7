@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 基本TextView 的样式 -->
+    <style name="TextBlack">
+        <item name="android:textColor">@color/black_title_font</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="TextGray">
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="TextYellow">
+        <item name="android:textColor">@color/yellow_main_font</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="TextWhite">
+        <item name="android:textColor">@color/white_font</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="TextBlue">
+        <item name="android:textColor">@color/blue_font</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="TextBlack.Small">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="TextBlack.Normal">
+        <item name="android:textSize">@dimen/text_normal</item>
+    </style>
+
+    <style name="TextBlack.Large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="TextBlack.Huge">
+        <item name="android:textSize">@dimen/text_huge</item>
+    </style>
+
+    <style name="TextGray.Small">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="TextGray.Normal">
+        <item name="android:textSize">@dimen/text_normal</item>
+    </style>
+
+    <style name="TextGray.Large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="TextGray.Huge">
+        <item name="android:textSize">@dimen/text_huge</item>
+    </style>
+
+    <style name="TextYellow.Small">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="TextYellow.Normal">
+        <item name="android:textSize">@dimen/text_normal</item>
+    </style>
+
+    <style name="TextYellow.Large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="TextYellow.Huge">
+        <item name="android:textSize">@dimen/text_huge</item>
+    </style>
+
+    <style name="TextWhite.Small">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="TextWhite.Normal">
+        <item name="android:textSize">@dimen/text_normal</item>
+    </style>
+
+    <style name="TextWhite.Large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="TextWhite.Huge">
+        <item name="android:textSize">@dimen/text_huge</item>
+    </style>
+
+    <style name="TextBlue.Small">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="TextBlue.Normal">
+        <item name="android:textSize">@dimen/text_normal</item>
+    </style>
+
+    <style name="TextBlue.Large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="TextBlue.Huge">
+        <item name="android:textSize">@dimen/text_huge</item>
+    </style>
+</resources>

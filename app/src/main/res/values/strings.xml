@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">HLCall</string>
+    <string name="sip_id_out">47.105.98.98:3030</string>
+    <string name="sip_id_in">192.168.0.200:5060</string>
+    <string name="service_name">HLCall服务</string>
+    <integer name="incoming_timeout">80</integer>
+    <integer name="outgoing_timeout">80</integer>
+    <integer name="norpt_timeout">36000</integer>
+    <integer name="call_record_list_items">100</integer>
+
+    <string name="app_version">HLCall Version 1.0</string>
+    <string name="company_name">浙江华络通信设备有限公司</string>
+    <string name="company_describe">Copyright@2019 Hualuo All Rights Reserved</string>
+    <string name="company_address">http://www.hzhl.net</string>
+
+    <!-- Service -->
+    <string name="incall_notif_active">Audio call ongoing</string>
+    <string name="incall_notif_paused">Paused call ongoing</string>
+    <string name="incall_notif_video">Video capturing call ongoing</string>
+    <string name="notification_started">注册开始</string>
+    <string name="unread_messages">unread messages</string>
+    <string name="missed_calls_notif_title">未接电话</string>
+    <string name="missed_calls_notif_body">未接电话</string>
+    <string name="notification_registered">已注册</string>
+    <string name="notification_register_failure">注册失败</string>
+    <string name="incoming_call">来电</string>
+    <string name="outgoing_call">拨号</string>
+
+
+    <!-- Errors -->
+    <string name="skipable_error_service_not_ready">Warning: service is not ready</string>
+    <string name="error">Error</string>
+    <string name="file_transfer_error">File transfer error</string>
+    <string name="warning_wrong_destination_address">Cannot build destination address from %s</string>
+    <string name="error_unknown">Unknown error</string>
+    <string name="error_call_declined">电话被拒绝</string>
+    <string name="error_user_busy">用户繁忙</string>
+    <string name="error_user_not_found">找不到用户</string>
+    <string name="error_incompatible_media">不兼容媒体参数</string>
+    <string name="error_low_bandwidth">Your caller has low bandwidth, video cannot be started</string>
+    <string name="error_network_unreachable">Network is unreachable</string>
+    <string name="error_bad_credentials">Bad credentials</string>
+    <string name="error_unauthorized">Unauthorized</string>
+    <string name="error_io_error">Network error</string>
+    <string name="download_image_failed">Download failed. Please check your network connection or try again later.</string>
+    <string name="remote_provisioning_failure">Failed to download or apply remote provisioning profile…</string>
+    <string name="remote_provisioning_again_title">Remote provisioning</string>
+    <string name="remote_provisioning_again_message">Do you want to change the provisioning URI?</string>
+
+    <string name="alway">始终转接</string>
+    <string name="alway2">始终使用此号码</string>
+    <string name="connected">占线时转接</string>
+    <string name="connected2">占线时的转接号码</string>
+    <string name="timeout">无人接听时转接</string>
+    <string name="timeout2">无人接听时的转接号码</string>
+    <string name="call_error">无法接通时转接</string>
+    <string name="call_error2">无法接通时的转接号码</string>
+
+    <string name="msg_date_format">M月d日</string>
+    <string name="today_date_format">HH:mm</string>
+    <string name="messages_date_format">MM月dd日 HH:mm</string>
+    <string name="year_date_format">yyyy年MM月dd日 HH:mm</string>
+
+
+    <string name="wrong_list">加载失败，请下拉刷新</string>
+    <string name="empty_list">~空空的~</string>
+    <string name="no_network">加载失败，点击重试</string>
+    <string name="no_network_can_click">网络连接失败,请检查后点击重试</string>
+    <string name="no_data_can_click">获取数据失败,请点击重试</string>
+    <string name="no_data">获取数据失败</string>
+    <string name="pull_refresh_loading_tips">正在加载中…</string>
+
+
+    <string name="complete_tips">完成</string>
+    <string name="complete_format_tips">完成%d/9</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

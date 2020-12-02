@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_module"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_row"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/tv_number"
+                style="@style/TextBlack.Normal"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/iv_call"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@drawable/icon_dianhuacc" />
+        </LinearLayout>
+
+        <include layout="@layout/include_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_row"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="20dp">
+
+            <TextView
+                style="@style/TextBlack.Normal"
+                android:text="默认" />
+
+            <TextView
+                style="@style/TextGray.Small"
+                android:text="手机铃声" />
+        </LinearLayout>
+
+        <include layout="@layout/include_line" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_row"
+        android:background="@color/white_bg"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_modify"
+                style="@style/TextGray.Small"
+                android:drawableTop="@drawable/icon_bianjiaaa"
+                android:text="编辑" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_del"
+                style="@style/TextGray.Small"
+                android:drawableTop="@drawable/icon_scthjl"
+                android:text="删除" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_letter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line" />
+
+        <TextView
+            android:id="@+id/item_address_list_tv_catalog"
+            style="@style/TextBlack.Normal"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/space_sides"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <include layout="@layout/include_line_2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="@dimen/space_sides">
+        <!--android:background="@drawable/selector_bg_color"-->
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circle_head"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_touxiang" />
+
+        <TextView
+            android:id="@+id/tv_name_address"
+            style="@style/TextBlack.Normal"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/circle_head" />
+
+        <TextView
+            android:id="@+id/tv_number_address"
+            style="@style/TextBlack.Normal"
+            android:layout_below="@+id/tv_name_address"
+            android:layout_marginTop="15dp"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

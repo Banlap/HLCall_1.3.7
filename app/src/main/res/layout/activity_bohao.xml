@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray20">
+
+    <TextureView
+        android:id="@+id/remote_video_texture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/call_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_bohao_top"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_call_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_font"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:id="@+id/tv_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/white_font"
+                    android:textSize="@dimen/text_huge" />
+
+                <Chronometer
+                    android:id="@+id/chronometer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white_font"
+                    android:textSize="@dimen/text_small"
+                    android:visibility="invisible" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_describe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white_font"
+                        android:textSize="@dimen/text_huge" />
+
+                    <ImageView
+                        android:id="@+id/iv_del"
+                        android:layout_width="32dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_shanc"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_call_bohao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextWhite.Small"
+                            android:text="1"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="oo"
+                            android:textColor="@color/white_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextWhite.Small"
+                            android:text="2"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ABC"
+                            android:textColor="@color/white_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextWhite.Small"
+                            android:text="3"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DEF"
+                            android:textColor="@color/white_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextWhite.Small"
+                            android:text="4"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="GHI"
+                            android:textColor="@color/white_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextWhite.Small"
+                            android:text="5"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="JKL"
+                            android:textColor="@color/white_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextWhite.Small"
+                            android:layout_height="wrap_content"
+                            android:text="6"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MNO"
+                            android:textColor="@color/white_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_7"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextWhite.Small"
+                            android:text="7"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PQRS"
+                            android:textColor="@color/white_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_8"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextWhite.Small"
+                            android:text="8"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TUV"
+                            android:textColor="@color/white_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_9"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextWhite.Small"
+                            android:text="9"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="WXYZ"
+                            android:textColor="@color/white_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_star"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextWhite.Small"
+                            android:text="*"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(P)"
+                            android:textColor="@color/white_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_0"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextWhite.Small"
+                            android:text="0"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+"
+                            android:textColor="@color/white_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_jing"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextWhite.Small"
+                            android:text="#"
+                            android:textSize="@dimen/number"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(W)"
+                            android:textColor="@color/white_font"
+                            android:textSize="@dimen/number_2" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_mute"
+                style="@style/TextWhite.Normal"
+                android:drawableTop="@drawable/selector_mute"
+                android:gravity="center_horizontal"
+                android:text="静音" />
+
+            <TextView
+                android:id="@+id/tv_keyboard"
+                style="@style/TextWhite.Normal"
+                android:layout_marginLeft="28dp"
+                android:drawableTop="@drawable/selector_keyboard"
+                android:gravity="center_horizontal"
+                android:text="键盘" />
+
+            <TextView
+                android:id="@+id/tv_mianti"
+                style="@style/TextWhite.Normal"
+                android:layout_marginLeft="28dp"
+                android:drawableTop="@drawable/selector_mianti"
+                android:gravity="center_horizontal"
+                android:text="免提" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_transfer"
+                style="@style/TextWhite.Normal"
+                android:drawableTop="@drawable/selector_hujiao"
+                android:gravity="center_horizontal"
+                android:text="呼叫转移" />
+
+            <TextView
+                style="@style/TextWhite.Normal"
+                android:layout_marginLeft="28dp"
+                android:drawableTop="@drawable/selector_tongxunlu2"
+                android:gravity="center_horizontal"
+                android:text="通讯录"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_record"
+                style="@style/TextWhite.Normal"
+                android:layout_marginLeft="28dp"
+                android:drawableTop="@drawable/selector_record"
+                android:gravity="center_horizontal"
+                android:text="录音"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_video"
+                style="@style/TextWhite.Normal"
+                android:layout_marginLeft="28dp"
+                android:drawableTop="@drawable/selector_video"
+                android:gravity="center_horizontal"
+                android:text="视频"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/tv_to"
+            style="@style/TextWhite.Normal"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40dp"
+            android:layout_toLeftOf="@+id/iv_close_bohao"
+            android:text="转移"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_close_bohao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/icon_guad" />
+
+        <TextView
+            android:id="@+id/tv_hide"
+            style="@style/TextWhite.Normal"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@+id/iv_close_bohao"
+            android:text="隐藏"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_more"
+            style="@style/TextWhite.Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="更多" />
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="142dp"
+        android:layout_height="200dp"
+        android:layout_gravity="top|right"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp">
+
+        <org.linphone.mediastream.video.capture.CaptureTextureView
+            android:id="@+id/local_preview_texture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/iv_switch_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:src="@drawable/icon_switch_camera"
+            android:visibility="gone" />
+    </FrameLayout>
+</FrameLayout>
+
+

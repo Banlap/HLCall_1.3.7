@@ -1,0 +1,4 @@
+<vector android:height="@dimen/call_menu_icon" android:viewportHeight="1024"
+    android:viewportWidth="1024" android:width="@dimen/call_menu_icon" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/call_menu_sl" android:pathData="M320,864c-17.67,0 -32,-14.31 -32,-32V192c0,-17.67 14.33,-32 32,-32s32,14.33 32,32v640c0,17.69 -14.33,32 -32,32zM704,864c-17.69,0 -32,-14.31 -32,-32V192c0,-17.67 14.31,-32 32,-32s32,14.33 32,32v640c0,17.69 -14.31,32 -32,32z"/>
+</vector>

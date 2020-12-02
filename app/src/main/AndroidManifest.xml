@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="hzhl.net.hlcall"
+    android:installLocation="internalOnly">
+    <!-- 表示程序只能被安装在内存中 -->
+    <!-- 前后台的切换 -->
+    <!--<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.GET_TOP_ACTIVITY_INFO" />-->
+    <uses-permission android:name="android.permission.REORDER_TASKS" /> <!-- 获取通讯录权限 -->
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.USE_SIP" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name = "android.permission.DISABLE_KEYGUARD"/><!-- 屏蔽HOME键需要的权限 -->
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" /> <!-- uses-permission android:name="android.permission.READ_LOGS" / -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.STOP_APP_SWITCHES`" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:sharedUserId="android.uid.system"
+        android:name=".App"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="hzhl.net.hlwork.ui.setting.VideoSettingActivity"></activity>
+        <activity android:name="hzhl.net.hlwork.ui.work.WorkTabActivity"></activity>
+        <activity android:name=".activity.MeetingActivity" />
+        <activity android:name=".activity.MeetingAddActivity" /> <!-- 百度地图AK -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="aApzXWOg1FCZngspdD4NGDczGTe5inEi" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <activity android:name=".activity.MovingPubActivity" />
+        <activity android:name=".activity.MovingActivity" />
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="standard" />
+        <activity android:name=".activity.SipSettingActivity" />
+        <activity android:name=".activity.NormalSettingsActivity"/>
+        <activity android:name=".activity.AddSipActivity" />
+        <activity android:name=".activity.AddBlacklistActivity" />
+        <activity
+            android:name=".activity.CallRingActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.BohaoActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+        <activity android:name=".activity.BlacklistActivity" />
+        <activity android:name=".activity.MissedCallWarnActivity" />
+        <activity android:name=".activity.ContactsListItemActivity" />
+
+        <service
+            android:name=".LinphoneService"
+            android:label="@string/app_name" />
+
+        <activity android:name=".activity.TongXunLuInfoActivity" />
+        <activity android:name=".activity.TransferActivity" />
+
+        <service android:name=".FloatWindowService" /> <!-- This one needs to be registered from application -->
+        <!-- receiver android:name=".KeepAliveReceiver" / -->
+        <!-- 注册接收系统开机广播消息的广播接收者 -->
+        <receiver
+            android:name=".MyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activity.VoiceSettingActivity" />
+        <activity android:name=".activity.RingtoneActivity" />
+        <activity android:name=".activity.ContactsAddActivity" />
+        <activity
+            android:name=".activity.ContactsModifyActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:name=".activity.ContactsDetailActivity" />
+        <activity android:name=".activity.AboutMeActivity" />
+        <activity android:name=".activity.RecordsActivity" />
+        <activity
+            android:name=".activity.ChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PhotoSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.NewChatActivity" /> <!-- 以下为在线更新配置 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.file_provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity android:name=".activity.IntercomAddActivity" />
+        <activity android:name=".activity.IntercomActivity" />
+
+
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="400" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="750" />
+    </application>
+
+</manifest>

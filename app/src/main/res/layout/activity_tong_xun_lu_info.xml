@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_module"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="20dp">
+
+    <include layout="@layout/include_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circle_head"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_touxiang" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextBlack.Normal" />
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="0.5dp"
+            android:background="@color/line" />
+
+        <TextView
+            android:id="@+id/tv_gongsi"
+            style="@style/TextBlack.Normal"
+            android:layout_marginTop="20dp"
+            android:text="公司名称"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="0.5dp"
+            android:background="@color/line" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_row"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextBlack.Normal"
+            android:layout_weight="1"
+            android:text="名字"
+            android:textStyle="bold" />
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/tv_name"
+            style="@style/TextGray.Normal" />
+    </LinearLayout>
+
+    <include layout="@layout/include_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_row"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextBlack.Normal"
+            android:layout_weight="1"
+            android:text="公司组织"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/TextGray.Normal" />
+    </LinearLayout>
+
+    <include layout="@layout/include_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_row"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextBlack.Normal"
+            android:layout_weight="1"
+            android:text="手机1"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_number"
+            style="@style/TextGray.Normal" />
+    </LinearLayout>
+
+    <include layout="@layout/include_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_row"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextBlack.Normal"
+            android:layout_weight="1"
+            android:text="手机2"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_number2"
+            style="@style/TextGray.Normal" />
+    </LinearLayout>
+
+    <include layout="@layout/include_line" />
+
+
+
+
+
+    <TextView
+        android:id="@+id/tv_add_blacklist"
+        style="@style/TextBlue.Normal"
+        android:layout_marginTop="20dp"
+        android:text="加入黑名单"
+        android:textStyle="bold" />
+
+</LinearLayout>

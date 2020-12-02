@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_sides"
+        android:layout_marginRight="@dimen/space_sides"
+        android:background="@drawable/shape_white_r6"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_call_system"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="手机拨号"
+            android:textColor="@color/black_title_font"
+            android:textSize="@dimen/text_normal" />
+
+        <include layout="@layout/include_line" />
+
+        <TextView
+            android:id="@+id/tv_call"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="语音呼叫"
+            android:textColor="@color/black_title_font"
+            android:textSize="@dimen/text_normal" />
+
+        <include layout="@layout/include_line" />
+
+        <TextView
+            android:id="@+id/tv_call_video"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="视频呼叫"
+            android:textColor="@color/black_title_font"
+            android:textSize="@dimen/text_normal" />
+        <include
+            android:id="@+id/view"
+            layout="@layout/include_line" />
+
+        <TextView
+            android:id="@+id/tv_send_message"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="发送信息"
+            android:textColor="@color/black_title_font"
+            android:textSize="@dimen/text_normal" />
+
+        <include
+            android:id="@+id/view"
+            layout="@layout/include_line" />
+
+        <TextView
+            android:id="@+id/tv_add_contact"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="新建联系人"
+            android:textColor="@color/black_title_font"
+            android:textSize="@dimen/text_normal" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_dismiss"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/space_sides"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="@dimen/space_sides"
+        android:layout_marginBottom="@dimen/space_sides"
+        android:background="@drawable/shape_white_r6"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/black_title_font"
+        android:textSize="@dimen/text_normal" />
+</LinearLayout>

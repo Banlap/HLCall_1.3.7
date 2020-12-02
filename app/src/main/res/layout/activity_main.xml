@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <include layout="@layout/include_line" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_row"
+        android:orientation="horizontal"
+        android:background="@color/white_module"
+        >
+        <TextView
+            android:id="@+id/tv_tongXunLu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_tongxunlu"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="联系人"
+            android:textColor="@color/selector_gray_blue"
+            android:textSize="@dimen/text_smaller" />
+
+        <TextView
+            android:id="@+id/tv_meeting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_xunjian_selctor"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="巡检记录"
+            android:textColor="@color/selector_gray_blue"
+            android:textSize="@dimen/text_smaller" />
+        <TextView
+            android:id="@+id/tv_boHao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_bohao"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="拨号盘"
+            android:textColor="@color/selector_gray_blue"
+            android:textSize="@dimen/text_smaller" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/tv_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableTop="@drawable/selector_message"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:text="短信"
+                android:textColor="@color/selector_gray_blue"
+                android:textSize="@dimen/text_smaller" />
+            <TextView
+                android:id="@+id/text_unread"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="99"
+                android:gravity="center"
+                android:layout_gravity="end|top"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_r"
+                android:visibility="invisible"
+                />
+
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/tv_peiZhi"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_peizhi"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="配置"
+            android:textColor="@color/selector_gray_blue"
+            android:textSize="@dimen/text_smaller" />
+
+    </LinearLayout>
+</LinearLayout>
+

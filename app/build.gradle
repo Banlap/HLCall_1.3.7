@@ -1,0 +1,184 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+
+//apply plugin: 'com.getkeepsafe.dexcount'
+//bugly
+apply plugin: 'bugly'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+bugly {
+    appId = '168cbdebdf' // 注册时分配的App ID
+    appKey = '228b51b0-0427-45a5-9255-f3aac5fc8483' // 注册时分配的App Key
+    bugly {
+        debug = true
+    }
+}
+//
+
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion = '28.0.3'
+    defaultConfig {
+        applicationId "hzhl.net.hlcall"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 25
+        //versionName "1.1.9.8"
+        //versionName "1.2.9.3"//无会议
+        //versionName "1.3.2"//修复通话问题及通话时键盘弹出问题
+        //versionName "1.3.3"//修复返回键删除号码
+        //versionName "1.3.4"//修复接听键问题
+        //versionName "1.3.5"//修复接听键问题 及 普通设置下屏蔽接听键
+        //versionName "1.3.6"//修复短信确认键编辑问题 、普通设置菜单上下操作、
+                             //修改通信录详细信息部分功能隐藏、通信录详细信息拨打电话
+        versionName "1.3.7"//修改通讯录选择电话号码 背景变灰
+                           //修复点击短信后 编辑问题
+                           //修改自动接听或视频 通话下 默认开启免提
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        //AS3.0编译依赖库错误，添加如下配置就OK了
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+        greendao {
+            schemaVersion 1
+            targetGenDir 'src/main/java'
+        }
+        /*ndk {
+            // 设置Bugly NDK支持的SO库架构
+            abiFilters 'armeabi-v7a','armeabi','x86', 'x86_64', 'arm64-v8a'
+        }*/
+
+        //multiDexEnabled true
+    }
+
+    //设置默认签名，可以用于调试微信功能，
+    signingConfigs {
+        release {
+            storeFile file('HLCall.keystore')
+            storePassword "hlcall"
+            keyAlias "key0"
+            keyPassword "hlcall"
+
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    //打包名称
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "HLCall " + defaultConfig.versionName + " 240x320" + ".apk"
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.release
+            debuggable true
+            //调试开启混淆 避免发布出现混淆问题
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    //使用java8
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    //id绑定
+    androidExtensions {
+        experimental = true
+    }
+
+}
+
+repositories {
+    /*maven {
+        // Replace snapshots by releases for releases !
+        url "https://linphone.org/snapshots/maven_repository"
+    }*/
+
+    //暂未使用 目前是引入aar
+    maven {
+        url "https://linphone.org/maven_repository"
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation('androidx.annotation:annotation:1.1.0') {
+        force = true
+    }
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.2.0'
+
+    //material
+    implementation 'com.google.android.material:material:1.2.0-alpha06'
+
+
+    implementation 'com.jakewharton:butterknife:7.0.1'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+    implementation 'org.greenrobot:greendao:3.2.2'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    //implementation 'com.tencent.bugly:crashreport:latest.release'
+    implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'
+    //latest.release指代最新Bugly SDK版本号，也可指定的版本，例2.1.9
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+    //latest.release指代最新Bugly NDK版本号，也可指定的版本，例3.0
+
+
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.orhanobut:logger:2.2.0'
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.4'
+    //linphone
+    //implementation "org.linphone:linphone-sdk-android:4.4.0-alpha.15+ad3e56d"
+    //implementation "org.linphone:linphone-sdk-android:4.4+"
+    implementation project(':linphone-sdk-android')
+    //  implementation 'com.github.bumptech.glide:glide:4.10.0'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    //加载动画
+    implementation 'com.zyao89:zloading:1.2.0'
+    //分包
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'org.jetbrains:annotations:15.0'
+
+    //上传图片 5.0 以上
+    //implementation ('com.github.icecooly:FastHttpClient:1.7'){
+    //    exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+    //}
+    //以下是5.0下支持
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'org.slf4j:slf4j-android:1.7.30'
+    //implementation 'it.xabaras.android.logger:Logger:1.3.6'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //SuperTextView
+    implementation 'com.github.chenBingX:SuperTextView:3.2.5.99'
+
+    //autosize
+    implementation 'me.jessyan:autosize:1.2.1'
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_item_normal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/space_row"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@color/white_module"
+    android:paddingLeft="@dimen/space_sides"
+    android:paddingRight="@dimen/space_sides">
+
+        <TextView
+            android:id="@+id/tv_item_normal_settings"
+            style="@style/TextBlack.Normal"
+            android:layout_weight="1"
+            android:text="设置" />
+
+        <ImageView
+            android:id="@+id/iv_item_normal_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@drawable/icon_fanhx" />
+
+
+</LinearLayout>
+
+
+
+
+

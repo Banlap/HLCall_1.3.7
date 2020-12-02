@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">@color/toolbar</color>
+    <color name="colorAccent">@color/blue_font</color>
+
+    <color name="blue_font">#4391ff</color>
+    <color name="fd111">#111111</color>
+    <color name="yellow_main_font">#feb916</color>
+    <color name="yellow_light">#fef907</color>
+    <color name="black_title_font">#2b2b2b</color>
+    <color name="red_font_btn">#FF2D4A</color>
+
+    <!--不透明背景-->
+    <color name="white_bg">#f2f2f2</color>
+    <color name="white">#ffffff</color>
+    <color name="white_module">#ffffff</color>
+    <color name="white_font">#eee</color>
+    <color name="toolbar">#f2f2f2</color>
+    <color name="gray">#999999</color>
+    <color name="line">#d0d0d0</color>
+
+    <!--半透明背景-->
+    <!--<color name="toolbar">#66F2F2F2</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_bg">#66F2F2F2</color>
+    <color name="white_module">#66FFFFFF</color>
+    <color name="white_font">#eee</color>
+    <color name="line">#66D0D0D0</color>
+    <color name="gray">#999999</color>-->
+
+
+    <color name="gray20">#661C1C1C</color>
+    <color name="green">#27C73F</color>
+    <color name="white_transparent">#00ffffff</color>
+
+
+    <color name="call_menu_en">#66FFFFFF</color>
+    <color name="call_menu_sl">@color/blue_font</color>
+    <color name="call_menu_normal">#ffffff</color>
+
+    <color name="home_nav_normal">#848284</color>
+    <color name="home_nav_sl">@color/blue_font</color>
+
+
+    <color name="colorA">#ff5e00</color>
+    <color name="colorB">#000000</color>
+    <color name="colorC">#444444</color>
+    <color name="colorD">#808080</color>
+    <color name="colorE">#c4c4c4</color>
+    <color name="colorF">#e1e1e1</color>
+    <color name="colorG">#f3f3f3</color>
+    <color name="colorH">#ffffff</color>
+    <color name="colorI">#ff0000</color>
+    <color name="colorJ">#ffa645</color>
+    <color name="colorK">#3eb5c0</color>
+    <color name="colorL">#96c11f</color>
+    <color name="color_f7">#f7f7f7</color>
+    <color name="color_aa">#aaaaaa</color>
+    <color name="color_9d">#9d9d9d</color>
+
+    <color name="bg_color">#f5f6f7</color>
+</resources>

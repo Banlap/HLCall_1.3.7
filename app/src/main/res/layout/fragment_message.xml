@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_bg">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_row"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/toolbar"
+        android:paddingLeft="@dimen/space_sides"
+        android:paddingRight="@dimen/space_sides">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/space_sides"
+            android:paddingRight="5dp"
+            android:text="短信"
+            android:textColor="@color/black_title_font"
+            android:textSize="@dimen/text_huge"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:id="@+id/iv_send_message"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/icon_bianjiaaa"
+
+            />
+
+    </LinearLayout>
+    <include layout="@layout/include_line" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/msg_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"/>
+</LinearLayout>

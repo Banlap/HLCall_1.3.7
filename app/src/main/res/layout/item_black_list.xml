@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_item"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/space_sides"
+    android:paddingRight="@dimen/space_sides">
+
+    <TextView
+        android:id="@+id/tv_user"
+        style="@style/TextBlack.Large" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextGray.Small"
+            android:text="拦截来电：" />
+
+        <TextView
+            android:id="@+id/tv_count"
+            style="@style/TextGray.Small"
+            android:text="0"/>
+    </LinearLayout>
+
+
+</LinearLayout>

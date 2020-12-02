@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_module"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:id="@+id/iv_company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/icon_company" />
+
+    <TextView
+        android:id="@+id/tv_app_version"
+        style="@style/TextBlack.Large"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="@string/app_version"
+        android:textStyle="bold" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:id="@+id/tv_company_name"
+        style="@style/TextBlack.Large"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/blue_font"
+        android:text="@string/company_name" />
+
+    <TextView
+        android:id="@+id/tv_describe"
+        style="@style/TextBlack.Normal"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="50dp"
+        android:text="@string/company_describe" />
+</LinearLayout>

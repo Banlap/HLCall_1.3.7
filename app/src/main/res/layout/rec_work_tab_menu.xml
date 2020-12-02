@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shape_white_r6"
+    android:elevation="@dimen/tab_elevation"
+    android:padding="@dimen/text_padding"
+    android:layout_marginTop="5dp"
+    >
+    <ImageView
+        android:id="@+id/image_tab_menu"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@mipmap/ic_location"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <TextView
+        style="@style/TextBlack.Normal"
+        android:id="@+id/text_tab_menu"
+        android:text="快捷"
+        android:gravity="center"
+        android:textSize="@dimen/text_smaller"
+        app:layout_constraintTop_toBottomOf="@id/image_tab_menu"
+        app:layout_constraintRight_toRightOf="@id/image_tab_menu"
+        app:layout_constraintLeft_toLeftOf="@id/image_tab_menu"
+        android:visibility="visible"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
